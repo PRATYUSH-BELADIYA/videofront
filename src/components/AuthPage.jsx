@@ -14,11 +14,11 @@ export default function AuthPage({ onAuth }) {
     setLoading(true) // show loader
     try {
       if (isLogin) {
-        const res = await axios.post('http://localhost:2000/api/auth/login', { username, password })
+        const res = await axios.post('https://video-otbl.onrender.com/api/auth/login', { username, password },{ withCredentials: true })
         localStorage.setItem('token', res.data.token)
         onAuth(res.data.token)
       } else {
-        await axios.post('http://localhost:2000/api/auth/register', { username, password })
+        await axios.post('https://video-otbl.onrender.com/api/auth/register', { username, password },{ withCredentials: true })
         setIsLogin(true) // switch to login after registration
       }
     } catch (err) {

@@ -7,7 +7,7 @@
 // import AuthPage from './components/AuthPage.jsx'
 
 // // Connect to your Node server
-// const socket = io('http://localhost:2000', { transports: ['websocket'] })
+// const socket = io('https://video-otbl.onrender.com', { transports: ['websocket'] })
 
 // export default function App() {
 //   const [roomId, setRoomId] = useState('')
@@ -238,7 +238,7 @@ import Controls from './components/Controls.jsx'
 import ChatBox from './components/ChatBox.jsx'
 import AuthPage from './components/AuthPage.jsx'
 
-const socket = io('http://localhost:2000', { transports: ['websocket'] })
+const socket = io('https://video-otbl.onrender.com', { transports: ['websocket'] })
 
 export default function App() {
   const [roomId, setRoomId] = useState('')
